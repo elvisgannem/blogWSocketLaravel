@@ -23,7 +23,7 @@ class PostCreated implements ShouldBroadcast
 
     public function broadcastOn(): array
     {
-        return ['my-channel'];
+        return ['posts'];
     }
 
     public function broadcastAs()

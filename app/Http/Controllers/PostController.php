@@ -14,7 +14,7 @@ class PostController extends Controller
         if ($id) {
             return response()->json(Post::find($id));
         }
-        return response()->json(Post::all());
+        return response()->json(Post::orderBy('created_at', 'desc')->get());
     }
 
     public function create(CreatePostFormRequest $request): JsonResponse
